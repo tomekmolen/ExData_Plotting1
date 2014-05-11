@@ -1,4 +1,4 @@
-data <- read.table('../household_power_consumption.txt', sep=';', header=T, colClasses = c('character', 'character', 'numeric',
+data <- read.table('./household_power_consumption.txt', sep=';', header=T, colClasses = c('character', 'character', 'numeric',
 'numeric', 'numeric', 'numeric', 'numeric', 'numeric', 'numeric'), na.strings='?')
 data$DateTime <- strptime(paste(data$Date, data$Time), "%d/%m/%Y %H:%M:%S")
 data <- subset(data, as.Date(DateTime) >= as.Date("2007-02-01") & as.Date(DateTime) <= as.Date("2007-02-02"))
